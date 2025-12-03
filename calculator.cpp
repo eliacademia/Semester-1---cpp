@@ -3,39 +3,43 @@ using namespace std;
 
 int main(){
 
-    double x;
-    double y;
-    double result;
+    double x, y, result;
 
     char op;
-
-    cout << "Enter your first value: " << endl;
-    cin >> x;
-
-    cout << "Choose +, -, * or /" << endl;
-    cin >> op;
-
-    cout << "Enter your second value: " << endl;
-    cin >> y;
+    char leave;
+   
+    cout << "Enter your equation: " << endl;
+    cin >> x >> op >> y;
 
     switch(op){
         case '+': 
         result = x + y;
         cout << result<< endl;
+        break;
 
         case '-':
         result = x - y;
         cout << result<< endl;
+        break;
 
         case '*':
         result = x * y;
         cout << result<< endl;
+        break;
 
         case '/':
+        if(y == 0){
+            cout << "math error" << endl;
+        }
+        else{
         result = x/y;
         cout << result<< endl;
-
+     }
+     break;
+     
     }
+
+
 
 
     return 0;
